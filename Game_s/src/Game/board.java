@@ -89,6 +89,61 @@ public class board implements Cloneable {
 	 		}
 
 
+public  void board_view(char [] bord, int dice, int indexg,int indexc,int [] ladders){
+		   int count=0;
+		   System.out.println("\n");
+		   System.out.println("\n");
+		   for(int i=64;i>=1;i--){
+				  if(count==8)
+			 	  {
+			 		  System.out.print("\n");
+			 		  System.out.print("\n");
+			 		  count=0;
+			 	  }
+			   Gameshaw(ladders,i);
+			   
+			   
+		   if(indexg == indexc && indexg==i){  
+		 	  System.out.print("\t[*@]  " + bord[indexg] +i);
+		 	 
+		   			}
+		   else if(i==indexg){
+		     	  System.out.print("\t[* ]  "  +i);
+		     	
+		     	  }
+		   else  if(i==indexc){
+		     	  System.out.print("\t[@ ]  " +i);
+		     	
+		   			}
+		 
+		   else {
+		 	  System.out.print("\t[  ]  " +i);
+		   }
+		   
+		   count++;
+		   }
+		 }
+
+
+
+		@Override
+			protected Object clone() throws CloneNotSupportedException {
+			// TODO Auto-generated method stub n
+			return super.clone();
+			}
+	}
+	
+	
+	
+	
+	
+	
+/*
+
+		public Prototype get_copy() {
+			 try {
+				 my_board= (board) super.clone();     
+				 } catch (CloneNotSupport
 
 
 
